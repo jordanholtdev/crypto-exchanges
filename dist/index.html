@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto</title>
+</head>
+<body>
+  <div class="wapper">
+      <header>
+              <h2 class="text-left text-light">Cryptocurrency Exchanges</h2>
+      </header>
+      <div class="main-area">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4 text-center">Search Exchanges</h1>
+              <p class="lead text-center">Find out what your favorite coins are being traded for at all the popular exchanges.
+                  <br>
+                  Start your search below by entering the crypto currency code
+              </p>
+            </div>
+        </div>
+        <nav class="navbar justify-content-center">
+            <form class="d-flex justify-content-center">
+                <input id="coinInput" name="coin" type="text" class="form-inline text-center form-control-lg" placeholder="Search...BTC" minlength="2" maxlength="6" required pattern="[A-Za-z]{2,6}">
+            </form>
+        </nav>
+        <div id="notFound" class="card d-none">
+            <div class="card-body text-center text-warning display-4">
+              Sorry, that coin wasn't found!
+            </div>
+        </div>
+        <main class="content">
+            <div class="container-fluid d-none p-0">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-xl d-flex">
+                        <div class="card flex-fill">
+                            <div class="card-body py-4">
+                                <div class="media">
+                                    <div class="d-inline-block mt-3 mr-3">
+                                        <i class="fab fa-ethereum feather-lg fa-fw"></i>
+                                    </div>
+                                    <div id="cardBase" class="media-body">
+                                        <h3 class="mb-2">ETH</h3>
+                                        <div class="mb-0">Base</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-xl d-flex">
+                        <div class="card flex-fill">
+                            <div class="card-body py-4">
+                                <div class="media">
+                                    <div class="d-inline-block mt-3 mr-3">
+                                        <i class="fas fa-dollar-sign feather-lg fa-fw"></i>
+                                    </div>
+                                    <div id="cardTarget" class="media-body">
+                                        <h3 class="mb-2">USD</h3>
+                                        <div class="mb-0">Currency</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-xl d-flex">
+                        <div class="card flex-fill">
+                            <div class="card-body py-4">
+                                <div class="media">
+                                    <div class="d-inline-block mt-3 mr-3">
+                                        <i class="fas fa-chart-bar feather-lg fa-fw"></i>
+                                    </div>
+                                    <div id="cardPrice" class="media-body">
+                                        <h3 class="mb-2">31720.1493969300</h3>
+                                        <div class="mb-0">Price</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-xl d-flex">
+                        <div class="card flex-fill">
+                            <div class="card-body py-4">
+                                <div class="media">
+                                    <div class="d-inline-block mt-3 mr-3">
+                                        <i class="fas fa-ruler-vertical feather-lg fa-fw"></i>
+                                    </div>
+                                    <div id="cardVolume" class="media-body">
+                                        <h3 class="mb-2">0.3766203596</h3>
+                                        <div class="mb-0">Volume</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-xl d-flex">
+                        <div class="card flex-fill">
+                            <div class="card-body py-4">
+                                <div class="media">
+                                    <div class="d-inline-block mt-3 mr-3">
+                                        <i class="fas fa-chart-line feather-lg fa-fw"></i>
+                                    </div>
+                                    <div id="cardChange" class="media-body">
+                                        <h3 class="mb-2">0.3766203596</h3>
+                                        <div class="mb-0">24 Change</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="d-flex col-lg-8">
+                        <div id="chartJS" class="flex-fill w-100 card">
+                            <div class="card-header">
+                                <span class="float-right badge badge-primary">Exchanges</span>
+                                <h5 class="mb-0 card-title">Crypto Exchanges</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart chart-lg">
+                                    <div class="chartjs-size-monitor">
+                                        <div class="chartjs-size-monitor-expand">
+                                            <div class=""></div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink">
+                                            <div class=""></div>
+                                        </div>
+                                    </div>
+                                    <canvas id="markets" class="chartjs-render-monitor" height="350" width="992" style="display: block; width: 992px; height: 350px;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 d-flex">
+                        <div class="card flex-fill w-100">
+                            <div class="card-header">
+                                <span class="badge badge-info float-right">Summary</span>
+                                <h5 class="card-title mb-0">Cryptocurrency Prices</h5>
+                            </div>
+                            <div id="top5" class="card-body">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+      </div>
+  </div>  
+    <script src="assets/app.bundle.js"></script>
+    <script src="assets/vendor.bundle.js"></script>
+</body>
+</html>
