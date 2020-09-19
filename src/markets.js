@@ -12,6 +12,7 @@ class Markets {
         const response = await fetch(this.marketsURI + query);
         const data = await response.json();
         
+        console.log(data)
         return data; 
     }
 
