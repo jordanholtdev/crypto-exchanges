@@ -1,7 +1,7 @@
-# Crypto Exchanges - cryptocurrency exchange search app
+# DEPRECATED - Crypto Exchanges - cryptocurrency exchange search app
 
-Crypto Exchanges is a simple search app that returns the current rates at various exchanges for comparison. 
-This app was created as training project as well as a simple way to check the value of cryptocurrencies at multiple exchanges. 
+Crypto Exchanges is a simple search app that returns the current rates at various exchanges for comparison.
+This app was created as training project as well as a simple way to check the value of cryptocurrencies at multiple exchanges.
 
 ![screen cap](./images/example.PNG)
 
@@ -14,7 +14,7 @@ This app was created as training project as well as a simple way to check the va
 
 ### Installation
 
-This app requires [Node.js](https://node.js.org/) v14.4.0 to run. 
+This app requires [Node.js](https://node.js.org/) v14.4.0 to run.
 
 To run this project, install it locally and install the dependencies using npm, then start the dev server:
 
@@ -32,6 +32,6 @@ $npm run build
 
 ##### Todos
 
-- Write tests 
+- Write tests
 - Optimize build size
-- Enhance chart reposiveness 
+- Enhance chart reposiveness
